@@ -1,0 +1,20 @@
+.buttonContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .registerButton {
+    margin: 10px 0px 6px 0px;
+    padding: 10px 30px;
+    border: 2px solid #E2E8F0;
+    background-color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    height: 56px;
+    background-color: #8C8AFF;
+    color: white;
+    font-weight: 400;
+ }
