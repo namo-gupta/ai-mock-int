@@ -6,7 +6,7 @@ export default function Landing (){
         <>
        <FirstSection />
        <SecondSection />
-       <ThirdSec
-        </>
+       <ThirdSec />
+       </>
     )
 }
