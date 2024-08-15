@@ -1,0 +1,39 @@
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    background-image: url('/images/homepageBackground.svg'); /* Add your image path here */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .textOverlay {
+    text-align: center;
+  }
+  .t1{
+    font-size: 56px;
+    line-height: 67px;
+  }
+  .t2{
+    font-size: 20px;
+    color: #8E939C;
+    line-height: 32px;
+    margin: 20px auto;
+    width: 80%;
+  }
+  .button{   
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 50px;
+    border-radius: 5px;
+    background-color: #8C8AFF;
+    color: #fff;
+    font-size: 17px;
+    line-height: 17px;
+  }
+  .primaryTextColor{
+    color:#8C8AFF
+  }

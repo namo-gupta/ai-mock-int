@@ -1,0 +1,61 @@
+.container {
+    padding: 73px 109px 150px 109px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    width: 50%;
+}
+
+.t1 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.t2 {
+    font-size: 48px;
+    line-height: 67px;
+}
+
+.mainHeading {
+    margin: 20px 0px;
+}
+
+.lightGray {
+    color: #C4C5C8;
+}
+
+.darkGray {
+    color: #8E939C;
+}
+
+.keyPointsContainer {
+    margin-top: 90px;
+}
+.verticalLine{
+    width: 2px;
+    background-color: #8C8AFF;
+}
+.pointsHeading {
+    display: flex;
+}
+
+.primaryTextColor {
+    color: #8C8AFF
+}
+.pointsContainer{
+
+}
+.mt30{
+    margin-top: 30px;
+}
+.pointsContent{
+    margin-top: 15px;
+}
+.ml40 {
+    margin-left: 40px;
+}
+.keyImage{
+    height: 530px;
+}
