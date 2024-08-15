@@ -1,4 +1,4 @@
-export default function SecondSection(){
+export default function ThirdSection(){
     return (
         <>
         
