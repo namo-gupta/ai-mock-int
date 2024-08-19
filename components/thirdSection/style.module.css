@@ -1,0 +1,33 @@
+.container{
+    padding: 90px 0px 90px 110px;
+    background-color: #070828;
+
+}
+.t1{
+    font-size: 20px;
+    color: #C4C5C8;
+}
+.t2{
+    font-size: 48px;
+    line-height: 67px;
+    color: #fff;
+}
+.t3{
+   font-size: 20px;
+   line-height: 32px;
+   color: #8E939C;
+}
+.mt20{
+    margin-top: 20px;
+}
+.feedbackCard {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    gap: 16px; /* Adds space between cards */
+    padding: 20px 0;
+}
+
+/* Adjust card width and styling to maintain consistency */
+.feedbackCard > div {
+    flex: 0 0 320px; /* Ensures each card has a fixed width */
+}

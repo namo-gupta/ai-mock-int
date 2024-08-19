@@ -1,0 +1,23 @@
+.container{
+    padding: 43px 107px;
+    display: flex;
+    justify-content: space-between;
+}
+.rightContent{
+    display: flex;
+}
+.name{
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 700;
+}
+.highlight{
+    background-color:#8C8AFF;
+    padding: 3px 9px;
+}
+.text{
+    font-size: 16px;
+    line-height: 25px;
+    color: #8E939C;
+    margin-left: 40px;
+}
