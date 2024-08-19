@@ -1,0 +1,16 @@
+.container{
+    padding: 18px 71px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #070828;
+}
+.name{
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 700;
+    color: #fff;
+}
+.highlight{
+    background-color:#8C8AFF;
+    padding: 3px 9px;
+}

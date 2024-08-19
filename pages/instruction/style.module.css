@@ -1,0 +1,52 @@
+.container{
+    margin: auto;
+    text-align: center;
+}
+.heading{
+    font-size: 24px;
+    line-height: 28px;
+    padding-top: 37px;
+}
+.instructionContainer{
+    border: 1px solid #E2E8F0;
+    padding: 23px 32px 42px 42px;
+    width: 50%;
+    margin: auto;
+    text-align: left;
+    margin-top: 47px;
+}
+.ol{
+    color: #8E939C;
+    margin-left: 20px;
+}
+
+.testHeading{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 31px;
+}
+
+.acceptCondition{
+    display: flex;
+    margin-top: 21px;
+}
+.checkBox{
+    border: 1px solid #E2E8F0;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+.button{
+    width: 270px;
+    background-color: #8C8AFF;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 60px;
+    color: #fff;
+    font-size: 17px;
+    line-height: 17px;
+    margin-top: 28px;
+}

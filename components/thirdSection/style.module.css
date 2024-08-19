@@ -22,12 +22,11 @@
 }
 .feedbackCard {
     display: flex;
-    overflow-x: auto; /* Enables horizontal scrolling */
-    gap: 16px; /* Adds space between cards */
+    overflow-x: auto; 
+    gap: 16px; 
     padding: 20px 0;
 }
 
-/* Adjust card width and styling to maintain consistency */
 .feedbackCard > div {
-    flex: 0 0 320px; /* Ensures each card has a fixed width */
+    flex: 0 0 320px;
 }
