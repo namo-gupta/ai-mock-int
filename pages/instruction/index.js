@@ -13,6 +13,12 @@ export default function Landing() {
                         <li>This assessment has a total of 24 questions.</li>
                         <li>This assessment takes about 40 minutes to complete.</li>
                         <li>Please complete this assessment in one continuous browser session. You cannot pause, restart or re-take it once you start the assessment.</li>
+                        <li>This assessment consists of 2 sections that can be attempted in any order.</li>
+                        <li>Once a section is submitted, you cannot revisit and edit your responses.</li>
+                        <li>Do not navigate away from the test browser or open new tabs. These actions may lead to disqualification.</li>
+                        <li>There is no negative marking for unattempted questions.</li>
+                        <li>You can use the Next and Previous buttons to navigate.</li>
+                        <li>Alternatively, use the question numbers provided to navigate quickly.</li>
                     </ol>
                     <div className={`${styles.acceptCondition} `}>
                         <div className={styles.checkBox}></div>
