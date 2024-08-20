@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.5"
+    "react-speech-kit": "^3.0.1",
+    "react-speech-recognition": "^3.10.0",
+    "regenerator-runtime": "^0.14.1",
+    "speech-to-text": "^2.9.1"
   },
   "devDependencies": {
     "eslint": "^8",
