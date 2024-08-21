@@ -1,7 +1,19 @@
+import React, {useState} from "react";
 import Header from "@/components/header";
+import Checkbox from 'react-custom-checkbox';
+import { FaCheck } from 'react-icons/fa';
 import styles from "./style.module.css";
+import { useRouter } from 'next/router';
 
 export default function Instruction() {
+    const [isChecked, setIsChecked] = useState(false);
+    const router = useRouter();
+    const handleGetStarted = () => {
+        router.push('/interview');
+      };
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
     return (
         <>
             <Header />
@@ -21,7 +33,19 @@ export default function Instruction() {
                         <li>Alternatively, use the question numbers provided to navigate quickly.</li>
                     </ol>
                     <div className={`${styles.acceptCondition} `}>
-                        <div className={styles.checkBox}></div>
+                    <Checkbox
+                            icon={<FaCheck color="white" size={14} />}
+                            borderColor="#8E939C"
+                            borderRadius={4}
+                            style={{ cursor: 'pointer', backgroundColor: isChecked ? '#8C8AFF' : 'white' }} // Background color changes when checked
+                            size={16}
+                            onChange={handleCheckboxChange} // Directly assign the function here
+                            checked={isChecked} // Controlled by state
+                            containerStyle={{
+                                display: 'flex',
+                                alignItems: 'center',
+                            }}
+                        />
                         <p>I agree to take this assessment based only on my immediate abilities.
                             I also agree not to participate in any malpractice by copying, taking external help,
                             or using any additional resources to improve my performance
@@ -30,7 +54,7 @@ export default function Instruction() {
 
 
                 </div>
-                <button className={styles.button}>Start Assesment</button>
+                <button className={styles.button} disabled={!isChecked} onClick={handleGetStarted}>Start Assesment</button>
 
 
             </div>
