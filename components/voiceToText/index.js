@@ -1,7 +1,7 @@
 import React from 'react';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
-const VoiceToText = () => {
+const VoiceToText = ({ onUserText }) => {
   const {
     transcript,
     listening,
@@ -14,9 +14,16 @@ const VoiceToText = () => {
   }
 
   const startListening = () => SpeechRecognition.startListening({ continuous: true });
-  const stopListening = () => SpeechRecognition.stopListening();
-
-  console.log(listening,'19');
+  
+  const stopListening = () => {
+    SpeechRecognition.stopListening();
+    
+    // Pass the transcript to the parent component when stop is clicked
+    if (transcript) {
+      onUserText(transcript);
+      resetTranscript();
+    }
+  };
 
   return (
     <div style={{ textAlign: 'center', marginTop: '50px' }}>
@@ -34,6 +41,7 @@ const VoiceToText = () => {
 };
 
 export default VoiceToText;
+
 
 
 

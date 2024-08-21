@@ -1,22 +1,38 @@
 import dynamic from 'next/dynamic';
-import React from 'react';
+import React, { useState } from 'react';
+import styles from './style.module.css';
+import Chatbot from '@/components/chatbot';
 
-// Dynamically import the VoiceToText component
 const DynamicVoiceToText = dynamic(() => import('../../components/voiceToText'), { ssr: false });
-const DynamicTextToVoice = dynamic(() => import('../../components/textToVoice'), { ssr: false});
-
-
+const DynamicTextToVoice = dynamic(() => import('../../components/textToVoice'), { ssr: false });
 
 export default function Interview() {
-    return (
-        <>
-           
-            <DynamicVoiceToText />
-            <DynamicTextToVoice/>
-           
-        </>
-    )
+  const [userText, setUserText] = useState('');
+  const [botResponse, setBotResponse] = useState('');
+
+  const handleUserText = (text) => {
+    setUserText(text);
+  };
+
+  const handleBotResponse = (response) => {
+    setBotResponse(response);
+  };
+
+  return (
+    <>
+      <div className={styles.audioScreen}>
+        <DynamicVoiceToText onUserText={handleUserText} />
+        <DynamicTextToVoice />
+      </div>
+      <div className={styles.chatbot}>
+        <Chatbot userText={userText} onBotResponse={handleBotResponse} />
+      </div>
+    </>
+  );
 }
+
+
+
 
 // import dynamic from 'next/dynamic';
 
