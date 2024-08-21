@@ -1,0 +1,32 @@
+/* Chatbot.module.css */
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    margin: 10px;
+    padding: 10px;
+    background-color: #00B2B6;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .button:hover {
+    background-color: #008b8b;
+  }
+  
+  .transcript {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
