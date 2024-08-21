@@ -19,8 +19,12 @@
 
 }
 .cards{
-    margin-top: 15px;
-    display: grid;
+     margin-top: 15px;
+   /* display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
+    grid-gap: 15px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
 }

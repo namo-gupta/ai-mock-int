@@ -1,5 +1,11 @@
 import styles from "./style.module.css"
+import { useRouter } from 'next/router';
+
 export default function FirstSection() {
+    const router = useRouter();
+    const handleGetStarted = () => {
+        router.push('/selection');
+      };
     return (
         <>
             <div className={styles.background}>
@@ -12,7 +18,7 @@ export default function FirstSection() {
                     </p>
                     <p className={styles.t2}>Prepare, Practice, and Perfect with InterviewPro AI - Your Personal Interview Coach.</p>
                 </div>
-                <button className={styles.button}>Get Started
+                <button className={styles.button} onClick={handleGetStarted}>Get Started
                     </button>
 
             </div>

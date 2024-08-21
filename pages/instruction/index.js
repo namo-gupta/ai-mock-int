@@ -1,7 +1,7 @@
 import Header from "@/components/header";
 import styles from "./style.module.css";
 
-export default function Landing() {
+export default function Instruction() {
     return (
         <>
             <Header />
@@ -10,9 +10,9 @@ export default function Landing() {
                 <div className={styles.instructionContainer}>
                     <p className={styles.testHeading}>Test Instruction</p>
                     <ol className={styles.ol}>
-                        <li>This assessment has a total of <span style={{color:'black', fontWeight:'800'}}>24 questions</span>.</li>
-                        <li>This assessment takes about <span style={{color:'black', fontWeight:'800'}}>40 minutes</span> to complete.</li>
-                        <li>Please complete this assessment in  <span style={{color:'black', fontWeight:'800'}}>one continuous browser session</span>. <br></br>You cannot pause, restart or re-take it once you start the assessment.</li>
+                        <li>This assessment has a total of <span style={{ color: 'black', fontWeight: '800' }}>24 questions</span>.</li>
+                        <li>This assessment takes about <span style={{ color: 'black', fontWeight: '800' }}>40 minutes</span> to complete.</li>
+                        <li>Please complete this assessment in  <span style={{ color: 'black', fontWeight: '800' }}>one continuous browser session</span>. <br></br>You cannot pause, restart or re-take it once you start the assessment.</li>
                         <li>This assessment consists of 2 sections that can be attempted in any order.</li>
                         <li>Once a section is submitted, you cannot revisit and edit your responses.</li>
                         <li>Do not navigate away from the test browser or open new tabs. These actions may lead to disqualification.</li>

@@ -1,6 +1,11 @@
 import styles from "./style.module.css";
+import { useRouter } from 'next/router';
 
 export default function InterviewCard() {
+    const router = useRouter();
+    const handleGetStarted = () => {
+        router.push('/instruction');
+      };
     return (
         <div className={styles.container}>
             <p>Most Recent</p>
@@ -15,7 +20,7 @@ export default function InterviewCard() {
                     <p>7 Questions</p>
                 </div>
             </div>
-            <button className={styles.button}>Start Interview</button>
+            <button className={styles.button} onClick={handleGetStarted}>Start Interview</button>
 
         </div>
     )
