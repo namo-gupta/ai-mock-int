@@ -33,10 +33,12 @@
 .keyPointsContainer {
     margin-top: 90px;
 }
-.verticalLine{
+
+.verticalLine {
     width: 2px;
     background-color: #8C8AFF;
 }
+
 .pointsHeading {
     display: flex;
 }
@@ -44,18 +46,115 @@
 .primaryTextColor {
     color: #8C8AFF
 }
-.pointsContainer{
 
-}
-.mt30{
+.pointsContainer {}
+
+.mt30 {
     margin-top: 30px;
 }
-.pointsContent{
+
+.pointsContent {
     margin-top: 15px;
 }
+
 .ml40 {
     margin-left: 40px;
 }
-.keyImage{
+
+.keyImage {
     height: 530px;
+}
+
+@media screen and (max-width: 1080px) and (min-width:785px) {
+    .container {
+        padding: 50px 20px 50px 85px;
+    }
+
+    .keyPointsContainer {
+        margin-top: 30px;
+    }
+
+    .ml40 {
+        margin-left: 20px;
+    }
+
+    .t1 {
+        line-height: 24px;
+    }
+
+    .t2 {
+        line-height: 38px;
+    }
+
+    .keyImage {
+        height: 430px;
+        margin-top: 30%;
+    }
+
+}
+
+@media screen and (max-width: 784px) and (min-width:581px) {
+    .container {
+        padding: 50px 10px 50px 45px;
+    }
+
+    .keyPointsContainer {
+        margin-top: 35px;
+    }
+
+    .ml40 {
+        margin-left: 15px;
+    }
+
+    .t1 {
+        line-height: 24px;
+    }
+
+    .t2 {
+        line-height: 38px;
+    }
+
+    .keyImage {
+        height: 430px;
+        margin-top: 30%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .container {
+        flex-direction: column;
+        justify-content: unset;
+        padding: 50px 20px 50px 20px;
+    }
+
+    .container>div:nth-child(2) {
+        margin-top: 40px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .t1 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .t2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    .keyPointsContainer {
+        margin-top: 45px;
+    }
+
+    .keyImage {
+        height: 340px;
+    }
+
+    .ml40 {
+        margin-left: 20px;
+    }
+
 }

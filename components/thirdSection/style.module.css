@@ -1,32 +1,48 @@
-.container{
+.container {
     padding: 90px 0px 90px 110px;
     background-color: #070828;
 
 }
-.t1{
+
+.t1 {
     font-size: 20px;
     color: #C4C5C8;
 }
-.t2{
+
+.t2 {
     font-size: 48px;
     line-height: 67px;
     color: #fff;
 }
-.t3{
-   font-size: 20px;
-   line-height: 32px;
-   color: #8E939C;
+
+.t3 {
+    font-size: 20px;
+    line-height: 32px;
+    color: #8E939C;
 }
-.mt20{
+
+.mt20 {
     margin-top: 20px;
 }
+
 .feedbackCard {
     display: flex;
-    overflow-x: auto; 
-    gap: 16px; 
+    overflow-x: auto;
+    gap: 16px;
     padding: 20px 0;
 }
 
-.feedbackCard > div {
+.feedbackCard>div {
     flex: 0 0 320px;
+}
+
+@media screen and (max-width: 580px) {
+    .container {
+        padding: 63px 0px 90px 25px;
+
+    }
+
+    .t2 {
+        font-size: 28px;
+    }
 }
