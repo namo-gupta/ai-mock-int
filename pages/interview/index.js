@@ -19,14 +19,17 @@ export default function Interview() {
   };
 
   return (
-    <>
-      <div className={styles.audioScreen}>
-        <DynamicVoiceToText onUserText={handleUserText} />
-        <DynamicTextToVoice />
+    <> 
+      <div className={styles.container}>
+        <div className={styles.audioScreen}>
+          <DynamicVoiceToText onUserText={handleUserText} />
+          <DynamicTextToVoice />
+        </div>
+        <div className={styles.chatBot}>
+          <Chatbot userText={userText} onBotResponse={handleBotResponse} />
+        </div>
       </div>
-      <div className={styles.chatbot}>
-        <Chatbot userText={userText} onBotResponse={handleBotResponse} />
-      </div>
+
     </>
   );
 }

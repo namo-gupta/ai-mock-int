@@ -1,3 +1,6 @@
+.container{
+    display: flex;
+}
 .audioScreen{
     width: 70%;
 }
