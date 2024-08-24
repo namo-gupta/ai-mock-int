@@ -18,7 +18,6 @@ const VoiceToText = ({ onUserText }) => {
   const stopListening = () => {
     SpeechRecognition.stopListening();
     
-    // Pass the transcript to the parent component when stop is clicked
     if (transcript) {
       onUserText(transcript);
       resetTranscript();

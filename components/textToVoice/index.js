@@ -64,7 +64,7 @@ const TextToVoice = () => {
   const { speak } = useSpeechSynthesis();
 
   useEffect(() => {
-    setIsClient(true); // This will trigger after the component is mounted
+    setIsClient(true);
   }, []);
 
   if (!isClient) {
