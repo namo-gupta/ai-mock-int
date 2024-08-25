@@ -12,7 +12,7 @@ export default function Interview() {
   const [botResponse, setBotResponse] = useState('');
 
 
-  const fetchImage = async (text) => {
+  const fetchResponse = async (text) => {
     let resp = await getResponse(text);
     console.log("resp",resp);
   };
@@ -22,7 +22,7 @@ export default function Interview() {
   };
 
   const handleBotResponse = (response) => {
-    fetchImage(response)
+    fetchResponse(response)
     setBotResponse(response);
   };
   return (

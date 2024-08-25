@@ -1,33 +1,43 @@
 export async function postApi(endpoint, dataObject, headers, options = {}) {
+  if (!endpoint) return;
 
-    if (!endpoint) return;
-
-    try {
-        const resp = await fetch(endpoint, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",  
+  try {
+      const resp = await fetch(endpoint, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
               ...headers
           },
           body: JSON.stringify(dataObject),
-            
-        });
+      });
 
-       
-        data = await resp.json();
-      } catch (e) {
-        console.log(
-          `Failed to fetch ${endpoint} with: ${JSON.stringify(
-            dataObject
-          )} [${e.toString()}]`
-        );
+      if (!resp.ok) {
+          throw new Error(`HTTP error! status: ${resp.status}`);
       }
+
+      let data;
+      try {
+          data = await resp.json();
+      } catch (jsonError) {
+          throw new Error(`Failed to parse JSON: ${jsonError}`);
+      }
+
       return data;
-    }
+
+  } catch (e) {
+      console.log(
+          `Failed to fetch ${endpoint} with: ${JSON.stringify(
+              dataObject
+          )} [${e.toString()}]`
+      );
+      throw e;
+  }
+}
+
 
     export const getResponse = async (text) =>{
 
-      let url="https://ai-backend-24bh5niria-uc.a.run.app/GenerateMessage";
+      let url="https://ai-backend-24bh5niria-et.a.run.app/GenerateMessage";
       const body={
         "user_id": "ben123", 
         "session_context": {
@@ -45,10 +55,6 @@ export async function postApi(endpoint, dataObject, headers, options = {}) {
             {
                 "role": "user",
                 "content": [{ "text": "Yes I am ready." }]
-            },
-            {
-                "role": "model",
-                "content": [{ "text": ".. Thanks your interview is over. Have a good day." }]
             }
         ]
     }
