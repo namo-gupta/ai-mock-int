@@ -1,28 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import styles from './style.module.css';
 
-const Chatbot = ({ userText, onBotResponse }) => {
+const Chatbot = ({ userText, botResponse }) => {
   const [messages, setMessages] = useState([]); 
-  const [recentMessage, setRecentMessage] = useState(''); 
 
   useEffect(() => {
     if (userText) {
-      setRecentMessage(userText);
-
+      // Add user's message to the conversation
       setMessages((prev) => [...prev, { sender: 'user', text: userText }]);
-
-      setTimeout(() => {
-        const botResponse = 'This is a bot response.';
-        setMessages((prev) => [...prev, { sender: 'bot', text: botResponse }]);
-
-        onBotResponse(botResponse);
-      }, 1000);
     }
-  }, [userText, onBotResponse]);
+  }, [userText]);
+
+  useEffect(() => {
+    if (botResponse) {
+      // Add bot's response to the conversation
+      setMessages((prev) => [...prev, { sender: 'bot', text: botResponse }]);
+    }
+  }, [botResponse]);
 
   return (
     <div className={styles.chatContainer}>
-     
       {messages.map((message, index) => (
         <div
           key={index}
@@ -36,6 +33,7 @@ const Chatbot = ({ userText, onBotResponse }) => {
 };
 
 export default Chatbot;
+
 
 
 

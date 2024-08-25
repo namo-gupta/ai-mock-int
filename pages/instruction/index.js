@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Header from "@/components/header";
 import Checkbox from 'react-custom-checkbox';
 import { FaCheck } from 'react-icons/fa';
@@ -10,10 +10,10 @@ export default function Instruction() {
     const router = useRouter();
     const handleGetStarted = () => {
         router.push('/interview');
-      };
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  };
+    };
+    const handleCheckboxChange = () => {
+        setIsChecked(!isChecked);
+    };
     return (
         <>
             <Header />
@@ -22,18 +22,21 @@ export default function Instruction() {
                 <div className={styles.instructionContainer}>
                     <p className={styles.testHeading}>Test Instruction</p>
                     <ol className={styles.ol}>
-                        <li>This assessment has a total of <span style={{ color: 'black', fontWeight: '800' }}>24 questions</span>.</li>
-                        <li>This assessment takes about <span style={{ color: 'black', fontWeight: '800' }}>40 minutes</span> to complete.</li>
-                        <li>Please complete this assessment in  <span style={{ color: 'black', fontWeight: '800' }}>one continuous browser session</span>. <br></br>You cannot pause, restart or re-take it once you start the assessment.</li>
-                        <li>This assessment consists of 2 sections that can be attempted in any order.</li>
-                        <li>Once a section is submitted, you cannot revisit and edit your responses.</li>
-                        <li>Do not navigate away from the test browser or open new tabs. These actions may lead to disqualification.</li>
-                        <li>There is no negative marking for unattempted questions.</li>
-                        <li>You can use the Next and Previous buttons to navigate.</li>
-                        <li>Alternatively, use the question numbers provided to navigate quickly.</li>
+                        <li>This assessment has a total of <span style={{ color: 'black', fontWeight: '800' }}>24 questions</span>.</li>
+                        <li>This assessment takes about <span style={{ color: 'black', fontWeight: '800' }}>20-30 minutes</span> to complete.</li>
+                        <li>Please complete this assessment in <span style={{ color: 'black', fontWeight: '800' }}>one continuous browser session</span>. You cannot pause, restart, or re-take it once you start the assessment.</li>
+                        <li>Use the latest version of <span style={{ color: 'black', fontWeight: '800' }}>Google Chrome, Firefox, or Safari</span> for optimal performance.</li>
+                        <li>Find a quiet and comfortable location where you can focus without interruptions.</li>
+                        <li>When finished speaking for a question, press <span style={{ color: 'black', fontWeight: '800' }}>&lt;spacebar&gt;</span> to submit your response.</li>
+                        <li>Ensure you are well-lit and visible on camera, if applicable (natural light is best, but a lamp can work too).</li>
+                        <li>When responding to the AI, speak clearly and at a moderate pace to ensure accurate understanding.</li>
+                        <li>Provide genuine and thoughtful answers, as the AI is designed to assess your skills and fit based on your responses.</li>
+                        <li>Take your time with your answers and don't rush; it's okay to take a moment to think before responding.</li>
+                        <li>You will be given a detailed assessment of your interview after completion.</li>
                     </ol>
+
                     <div className={`${styles.acceptCondition} `}>
-                    <Checkbox
+                        <Checkbox
                             icon={<FaCheck color="white" size={14} />}
                             borderColor="#8E939C"
                             borderRadius={4}

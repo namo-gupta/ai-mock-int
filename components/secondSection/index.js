@@ -20,23 +20,30 @@ export default function SecondSection(){
                     <div className={`${styles.pointsContainer} `}>
                         <div className={`${styles.pointsHeading} ${styles.primaryTextColor}`}>
                             <p className={`${styles.t1} `}>01</p>
-                            <p className={`${styles.t1} ${styles.ml40} `}>Realistic Interview Simulations</p>
+                            <p className={`${styles.t1} ${styles.ml40} `}>Realistic Practice Interviews</p>
                         </div>
-                        <p className={`${styles.pointsContent} ${styles.lightGray}`}>Experience job-specific interview scenarios that mimic real-life settings.</p>
+                        <p className={`${styles.pointsContent} ${styles.lightGray}`}>Gen-AI simulated real conversations with industry experts to prepare for real-life interviews.</p>
                     </div>
                     <div className={`${styles.pointsContainer} ${styles.mt30}`}>
                         <div className={`${styles.pointsHeading} ${styles.primaryTextColor}`}>
                             <p className={`${styles.t1} `}>02</p>
-                            <p className={`${styles.t1} ${styles.ml40} `}>In-depth performance Feedback and Scoring</p>
+                            <p className={`${styles.t1} ${styles.ml40} `}>In-Depth Performance Analysis</p>
                         </div>
-                        <p className={`${styles.pointsContent} ${styles.lightGray}`}>Receive detailed and actionable feedback on your performance.</p>
+                        <p className={`${styles.pointsContent} ${styles.lightGray}`}>Receive comprehensive feedback highlighting strengths and areas for improvement.</p>
                     </div>
                     <div className={`${styles.pointsContainer} ${styles.mt30}`}>
                         <div className={`${styles.pointsHeading} ${styles.primaryTextColor}`}>
-                            <p className={`${styles.t1} `}>01</p>
-                            <p className={`${styles.t1} ${styles.ml40} `}>Unlimited Practice</p>
+                            <p className={`${styles.t1} `}>03</p>
+                            <p className={`${styles.t1} ${styles.ml40} `}>Confidence Building</p>
                         </div>
-                        <p className={`${styles.pointsContent} ${styles.lightGray}`}>Practice as often as you like to perfect your interview skills.</p>
+                        <p className={`${styles.pointsContent} ${styles.lightGray}`}>Practice without pressure in a supportive environment - it’s just technology and you!</p>
+                    </div>
+                    <div className={`${styles.pointsContainer} ${styles.mt30}`}>
+                        <div className={`${styles.pointsHeading} ${styles.primaryTextColor}`}>
+                            <p className={`${styles.t1} `}>04</p>
+                            <p className={`${styles.t1} ${styles.ml40} `}>Future Opportunities Database</p>
+                        </div>
+                        <p className={`${styles.pointsContent} ${styles.lightGray}`}>Sign up with us for exciting future opportunities tailored to your skills</p>
                     </div>
                 </div>
             </div>

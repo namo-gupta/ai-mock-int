@@ -35,33 +35,20 @@ export async function postApi(endpoint, dataObject, headers, options = {}) {
 }
 
 
-    export const getResponse = async (text) =>{
-
-      let url="https://ai-backend-24bh5niria-et.a.run.app/GenerateMessage";
-      const body={
-        "user_id": "ben123", 
-        "session_context": {
-            "interview_type": "consultant"
-        },
-        "message": [
-            {
-                "role": "user",
-                "content": [{ "text": "hi" }]
-            },
-            {
-                "role": "model",
-                "content": [{ "text": "we will start an interview. You ready?" }]
-            },
-            {
-                "role": "user",
-                "content": [{ "text": "Yes I am ready." }]
-            }
-        ]
-    }
+export const getResponse = async (conversation) => {
+  let url = "https://ai-backend-24bh5niria-et.a.run.app/GenerateMessage";
   
-      const data = await postApi(url,body);
-      return data;
-     }
+  const body = {
+    user_id: "ben123", 
+    session_context: {
+      interview_type: "consultant"
+    },
+    message: conversation // Send the entire conversation history
+  };
+
+  const data = await postApi(url, body);
+  return data; // Assuming API returns a message field with the bot's response
+};
 
     export const  dummy = () => {
         return (

@@ -10,7 +10,7 @@ export default function Landing (){
         <Header />
        <FirstSection />
        <SecondSection />
-       <ThirdSection />
+       {/* <ThirdSection /> */}
        <Footer />
        </>
     )

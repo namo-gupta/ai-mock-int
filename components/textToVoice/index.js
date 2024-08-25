@@ -55,29 +55,39 @@
 
 
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSpeechSynthesis } from 'react-speech-kit';
 
-const TextToVoice = () => {
+const TextToVoice = ({ textMessage }) => {
   const [text, setText] = useState('');
   const [isClient, setIsClient] = useState(false);
   const { speak } = useSpeechSynthesis();
+  const lastTextMessageRef = useRef('');  
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
+  useEffect(() => {
+    if (textMessage && textMessage !== lastTextMessageRef.current) {
+      speak({ text: textMessage });
+      lastTextMessageRef.current = textMessage;  
+    }
+  }, [textMessage, speak]);
+
   if (!isClient) {
-    return null; // Render nothing on the server
-  }
-  const textVoice = () => {
-    console.log("vbvbvvb",text);
-    speak({ text })
+    return null; 
   }
 
+  const textVoice = () => {
+    if (text) {
+      speak({ text });
+    }
+  };
+
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>Text to Voice Converter</h1>
+    <div >
+      {/* <h1>Text to Voice Converter</h1>
       <textarea
         rows="4"
         cols="50"
@@ -88,16 +98,18 @@ const TextToVoice = () => {
       />
       <br />
       <button
-        onClick={() =>textVoice()}
+        onClick={textVoice}
         style={{ marginTop: '20px', padding: '10px 20px', fontSize: '16px' }}
       >
         Convert to Voice
-      </button>
+      </button> */}
     </div>
   );
 };
 
 export default TextToVoice;
+
+
 
 // import React from 'react';
 // import { useSpeechSynthesis } from 'react-speech-kit';
